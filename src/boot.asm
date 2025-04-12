@@ -190,8 +190,8 @@ g_GDT:      ; NULL descriptor
 
 g_GDTDesc:  dw g_GDTDesc - g_GDT - 1    ; Limit - size of GDT
             dd g_GDT                    ; Address of GDT
-HelloMsg:   db 'Hello world from 32 protected mode!', 0
-RHelloMsg:   db 'Hello world from 16 real mode!', 0
+HelloMsg:   db 'Hello world from protected mode!', 0
+RHelloMsg:  db 'Hello world from real mode!', 0
 
 times 510 - ($ - $$) db 0
 dw 0AA55h
